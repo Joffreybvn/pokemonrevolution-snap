@@ -793,3 +793,4 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+/snap/source/pro_client_linux.zip
