@@ -1,5 +1,5 @@
 name: pokemonrevolution
-version: '0.0.3'
+version: '0.0.4'
 type: app
 base: core18
 
@@ -35,7 +35,6 @@ apps:
       - audio-playback
       - hardware-observe
       - system-observe
-      - personal-files
       - opengl
       - screen-inhibit-control
       - unity7
