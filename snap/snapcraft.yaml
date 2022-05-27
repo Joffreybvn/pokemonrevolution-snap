@@ -1,7 +1,7 @@
 name: pokemonrevolution
 version: '0.0.1'
 type: app
-base: core
+base: core18
 
 # Snapcraft metadata
 title: Pokemon Revolution Online
@@ -17,17 +17,25 @@ website: https://pokemonrevolution.net
 icon: snap/gui/logo.png
 license: MIT
 
+# Container parameters
+grade: devel
 confinement: devmode # use 'strict' once you have the right plugs and slots
-# grade: stable
 
 architectures:
   - build-on: amd64
     run-on: all
 
-adopt-info:
+# Application
+apps:
+  pokemonrevolution:
+    command: ./PROClient.x86_64
 
 
 parts:
-  my-part:
-    # See 'snapcraft plugins'
-    plugin: nil
+  pbo-client:
+    plugin: dump
+    source: ./sources/zip
+    source-type: local
+    override-build: |
+      snapcraftctl build
+      chmod +x ./PROClient.x86_64

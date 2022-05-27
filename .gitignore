@@ -794,3 +794,4 @@ dmypy.json
 cython_debug/
 
 /snap/source/pro_client_linux.zip
+/sources/zip/

@@ -7,5 +7,5 @@ wget -O pro_client_linux.zip "https://ddl.pokemonrevolution.net/PROClient_linux.
 unzip pro_client_linux.zip
 mv ./PROClient ./zip
 
-# Make executable
-chmod +x ./zip/PROClient.x86_64
+# Remove zip
+rm pro_client_linux.zip
