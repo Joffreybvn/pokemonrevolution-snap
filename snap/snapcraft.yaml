@@ -30,7 +30,6 @@ apps:
   pokemonrevolution:
     command: ./PROClient.x86_64
 
-
 parts:
   pbo-client:
     plugin: dump
