@@ -1,5 +1,5 @@
 name: pokemonrevolution
-version: '0.0.1'
+version: '0.0.3'
 type: app
 base: core18
 
@@ -18,17 +18,28 @@ icon: snap/gui/logo.png
 license: MIT
 
 # Container parameters
-grade: devel
-confinement: devmode # use 'strict' once you have the right plugs and slots
+grade: stable
+confinement: strict
 
 architectures:
   - build-on: amd64
-    run-on: all
+    run-on: amd64
 
 # Application
 apps:
   pokemonrevolution:
-    command: ./PROClient.x86_64
+    command: bin/desktop-launch $SNAP/PROClient.x86_64
+    plugs:
+      - network
+      - x11
+      - audio-playback
+      - hardware-observe
+      - system-observe
+      - personal-files
+      - opengl
+      - screen-inhibit-control
+      - unity7
+      - wayland
 
 parts:
   pbo-client:
@@ -38,3 +49,16 @@ parts:
     override-build: |
       snapcraftctl build
       chmod +x ./PROClient.x86_64
+    stage-packages:
+      - libglu1-mesa
+    after:
+      - desktop-glib-only
+
+  desktop-glib-only:
+    source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
+    source-subdir: glib-only
+    plugin: make
+    build-packages:
+      - libglib2.0-dev
+    stage-packages:
+      - libglib2.0-bin

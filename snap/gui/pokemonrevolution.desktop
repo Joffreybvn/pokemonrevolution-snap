@@ -1,0 +1,5 @@
+Name=Pokemon Revolution Online
+Comment=Online free to play Pokemon MMO
+Version=0.0.3
+Exec=pokemonrevolution
+Icon=${SNAP}/meta/gui/logo.png
