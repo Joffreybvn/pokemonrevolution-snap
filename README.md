@@ -9,16 +9,14 @@ distributions.</p>
 
 ![pokemon-revolution-online](./docs/screenshots/1.png?raw=true "PBO Client")
 
-<!-- Uncomment and modify this when you are provided a build status badge
 <p align="center">
-<a href="https://snapcraft.io/my-snap-name">
-  <img alt="enpass" src="https://snapcraft.io/my-snap-name/badge.svg" />
+<a href="https://snapcraft.io/pokemonrevolution">
+  <img alt="pokemonrevolution" src="https://snapcraft.io/pokemonrevolution/badge.svg" />
 </a>
-<a href="https://snapcraft.io/my-snap-name">
-  <img alt="enpass" src="https://snapcraft.io/my-snap-name/trending.svg?name=0" />
+<a href="https://snapcraft.io/pokemonrevolution">
+  <img alt="pokemonrevolution" src="https://snapcraft.io/pokemonrevolution/trending.svg?name=0" />
 </a>
 </p>
--->
 
 <!-- Uncomment and modify this when you have a screenshot
 ![my-snap-name](screenshot.png?raw=true "my-snap-name")
